@@ -27,15 +27,15 @@ function gotPoses(results){
     console.log("noseX "+ noseX + "noseY" + noseY);
 
     leftwristX = results[0].pose.leftWrist.x ;
-    rightwristX = results[0].pose.rightWrist.x ;
+    rightwristx = results[0].pose.rightWrist.x ;
     difference = floor(leftwristX - rightwristX);
-    console.log("leftwristX"+ leftwristX + "rightwristX" + rightwristX + "difference" + difference + "px");
+    console.log("leftwristX"+ leftwristX + "rightwristx" + rightwristx + "difference" + difference + "px");
   }
 }
 
 function draw(){
   background("#02d49c");
-  info = document.getElementById("info").innerHTML = "Width and height of the square is "= +difference + "px";
+  document.getElementById("info").innerHTML = "Width and height of the square is =" +difference + "px";
   fill("#FFA500");
   stroke("#000000");
   square(noseX,noseY,difference);
